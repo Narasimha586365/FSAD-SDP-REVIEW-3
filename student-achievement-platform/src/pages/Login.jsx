@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import { useAppContext } from '../context/AppContext';
 import '../styles/Login.css';
 
-const API_BASE = 'http://localhost:8080';
+const API_BASE = 'https://student-achievement-api.onrender.com';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -216,3 +216,4 @@ const Login = () => {
 };
 
 export default Login;
+

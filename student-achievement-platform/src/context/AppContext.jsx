@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useState } from 'react';
 
-const API_BASE = 'http://localhost:8080';
+const API_BASE = 'https://student-achievement-api.onrender.com';
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
@@ -289,3 +289,4 @@ export const useAppContext = () => {
   }
   return context;
 };
+

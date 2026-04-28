@@ -80,7 +80,7 @@ const TestReviewPanel = () => {
       if (!attempt?.certificateId) {
         throw new Error('Certificate is not issued yet.');
       }
-      const response = await fetch(`http://localhost:8080/certificate/download?certificateId=${attempt.certificateId}`, {
+      const response = await fetch(`https://student-achievement-api.onrender.com/certificate/download?certificateId=${attempt.certificateId}`, {
         headers: {
           Authorization: `Bearer ${currentUser?.token}`
         }
@@ -180,3 +180,4 @@ const TestReviewPanel = () => {
 };
 
 export default TestReviewPanel;
+

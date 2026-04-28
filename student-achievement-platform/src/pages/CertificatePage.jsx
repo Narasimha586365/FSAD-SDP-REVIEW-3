@@ -56,7 +56,7 @@ const CertificatePage = () => {
 
   const handleDownload = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/certificate/download?certificateId=${certificateId}`, {
+      const response = await fetch(`https://student-achievement-api.onrender.com/certificate/download?certificateId=${certificateId}`, {
         headers: {
           Authorization: `Bearer ${currentUser?.token}`
         }
@@ -129,3 +129,4 @@ const CertificatePage = () => {
 };
 
 export default CertificatePage;
+

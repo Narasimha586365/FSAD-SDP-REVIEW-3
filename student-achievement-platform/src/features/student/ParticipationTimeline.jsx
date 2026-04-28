@@ -160,7 +160,7 @@ const ParticipationTimeline = ({ participations }) => {
       }
 
       if (mode === 'download') {
-        const response = await fetch(`http://localhost:8080/certificate/download?certificateId=${resolvedCertificate.id}`, {
+        const response = await fetch(`https://student-achievement-api.onrender.com/certificate/download?certificateId=${resolvedCertificate.id}`, {
           headers: {
             Authorization: `Bearer ${currentUser?.token}`
           }
@@ -344,3 +344,4 @@ const ParticipationTimeline = ({ participations }) => {
 };
 
 export default ParticipationTimeline;
+

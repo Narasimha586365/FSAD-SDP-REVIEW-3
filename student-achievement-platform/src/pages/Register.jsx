@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import '../styles/Register.css';
 
-const API_BASE = 'http://localhost:8080';
+const API_BASE = 'https://student-achievement-api.onrender.com';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -275,3 +275,4 @@ const Register = () => {
 };
 
 export default Register;
+
