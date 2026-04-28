@@ -1,0 +1,49 @@
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode {
+  color-scheme: dark;
+  background: #020617;
+  color: #e2e8f0;
+}
+
+body.dark-mode #root {
+  background: #020617;
+}
+
+body.dark-mode .swal2-popup {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+body.dark-mode .swal2-title,
+body.dark-mode .swal2-html-container {
+  color: #e2e8f0;
+}

@@ -1,0 +1,248 @@
+.register-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.back-to-home {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.back-to-home:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-5px);
+}
+
+.register-card {
+  background: white;
+  padding: 45px;
+  border-radius: 24px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+  max-width: 750px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.register-icon {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0f172a, #2563eb);
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.28);
+}
+
+.register-header h1 {
+  font-size: 36px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.register-header p {
+  color: #7f8c8d;
+  font-size: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 14px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4fc3f7;
+  box-shadow: 0 0 0 4px rgba(79, 195, 247, 0.1);
+  transform: translateY(-2px);
+}
+
+.form-group input.error,
+.form-group select.error {
+  border-color: #e74c3c;
+  background: #fee;
+}
+
+.error-text {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+.register-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%);
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 25px;
+  box-shadow: 0 8px 20px rgba(79, 195, 247, 0.4);
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(79, 195, 247, 0.5);
+}
+
+.register-btn:active {
+  transform: translateY(-1px);
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 30px;
+  color: #7f8c8d;
+  font-size: 15px;
+}
+
+.login-link button {
+  background: none;
+  border: none;
+  color: #4fc3f7;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.login-link button:hover {
+  color: #29b6f6;
+  text-decoration: underline;
+}
+
+body.dark-mode .register-card {
+  background: rgba(15, 23, 42, 0.98);
+  border: 2px solid rgba(79, 195, 247, 0.3);
+}
+
+body.dark-mode .register-container {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+body.dark-mode .back-to-home {
+  background: rgba(15, 23, 42, 0.45);
+  border-color: rgba(148, 163, 184, 0.35);
+  color: #e2e8f0;
+}
+
+body.dark-mode .register-header h1 {
+  -webkit-text-fill-color: unset;
+  color: #f1f5f9;
+  background: none;
+}
+
+body.dark-mode .register-header p {
+  color: #94a3b8;
+}
+
+body.dark-mode .form-group label {
+  color: #f1f5f9;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: #475569;
+  color: #e5e7eb;
+}
+
+body.dark-mode .form-group input.error,
+body.dark-mode .form-group select.error {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+body.dark-mode .login-link {
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .register-card {
+    padding: 30px 25px;
+  }
+
+  .register-header h1 {
+    font-size: 28px;
+  }
+
+  .register-icon {
+    width: 72px;
+    height: 72px;
+    font-size: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

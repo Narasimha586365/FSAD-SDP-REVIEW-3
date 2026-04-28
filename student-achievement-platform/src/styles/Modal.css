@@ -1,0 +1,204 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 9998;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modal-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Modal Sizes */
+.modal-small {
+  width: 100%;
+  max-width: 400px;
+}
+
+.modal-medium {
+  width: 100%;
+  max-width: 600px;
+}
+
+.modal-large {
+  width: 100%;
+  max-width: 900px;
+}
+/* Register Link - Inside Card Styling */
+.register-link {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 2px solid #e0e0e0;
+  color: #7f8c8d;
+  font-size: 15px;
+}
+
+.register-link button {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.register-link button:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Dark Mode */
+body.dark-mode .register-link {
+  border-top-color: rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+}
+
+body.dark-mode .register-link button {
+  color: #a5b4fc;
+}
+
+body.dark-mode .register-link button:hover {
+  color: #c7d2fe;
+}
+
+
+/* Modal Header */
+.modal-header {
+  padding: 25px 30px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #7f8c8d;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: #f8f9fa;
+  color: #2c3e50;
+  transform: rotate(90deg);
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 30px;
+  color: #555;
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 20px 30px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* Dark Mode */
+body.dark-mode .modal-container {
+  background: #0f172a;
+}
+
+body.dark-mode .modal-title {
+  color: #f1f5f9;
+}
+
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .modal-body {
+  color: #cbd5e1;
+}
+
+body.dark-mode .modal-close {
+  color: #94a3b8;
+}
+
+body.dark-mode .modal-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+}
+
+/* Scrollbar for modal */
+.modal-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0 16px 16px 0;
+}
+
+.modal-container::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 4px;
+}
+
+body.dark-mode .modal-container::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-container {
+    max-height: 95vh;
+  }
+
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 20px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+  }
+}
